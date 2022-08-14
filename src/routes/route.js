@@ -27,24 +27,6 @@ router.get('/sol1', function (req, res){
     let missingNumber = total-sum
     res.send({data:missingNumber})
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 router.get('/student-details/:name', function(req, res){
     /*
     params is an attribute inside request that contains 
