@@ -27,6 +27,20 @@ router.get('/sol1', function (req, res){
     let missingNumber = total-sum
     res.send({data:missingNumber})
 })
+// Missing Number Problem 2
+router.get('/sol2',function(req,res){
+    let arr= [33, 34, 35, 37, 38]
+    let size = arr.length
+    let sum =0;
+    for(i=0;i<arr.length;i++){
+     sum=sum+arr[i]
+    }
+ let firstDigitInArray = arr[0]
+ let lastDigitInArray =arr.pop()
+ let findSum = ( size + 1) * (firstDigitInArray+lastDigitInArray ) / 2
+ let missingNumber = findSum-sum
+ res.send({data:missingNumber})
+})
 router.get('/student-details/:name', function(req, res){
     /*
     params is an attribute inside request that contains 
