@@ -15,6 +15,17 @@ router.post('/createBook', myController.createBook)
 
 // get data
 router.get('/getBookList', myController.getBookData)
+
+router.get('/geBookINYear', myController.getBooksInYear)
+
+
+
+router.post('/getParticularBook', myController.getParticularBooks)
+
+router.get('/getINRBooks',myController.getXINRBooks)
+
+router.get('/getRandomBook', myController. getRandomBooks)
+
    
 
 
