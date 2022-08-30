@@ -64,7 +64,7 @@ const updateUser = async function(req,res){
     return res.send({status:false,msg:"do not match the userId"})
   }
   // mid
-  let updateDetails = await userModel.findOneAndUpdate({_id:userId},updateData )
+  let updateDetails = await userModel.findOneAndUpdate({_id:userId},updateData,{new:true} )
   res.send({status:true,msg:updateDetails})
 
   
@@ -91,6 +91,7 @@ const  deleteUser = async function(req,res){
   res.send({ status: true, msg: userDeleted })
 
 }
+
 
 
 
