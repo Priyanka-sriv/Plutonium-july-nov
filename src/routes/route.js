@@ -11,10 +11,10 @@ router.post("/CreateUsers", userController.createUser)
 // part2
 router.post("/loginUser",userController.userLogin)
 // part3
-router.get("/users/:userId",authMiddleware.checkValidation, userController.verifyParticularUser)
+router.get("/users/:userId",authMiddleware.checkAuthentication,authMiddleware.checkAutherization, userController.verifyParticularUser)
 // // part4
-router.put("/updateUser/:_id",authMiddleware.checkValidation,userController.updateUser)
+router.put("/updateUser/:_id",authMiddleware.checkAuthentication,authMiddleware.checkAutherization,userController.updateUser)
 // // part5
-router.delete("/deleteUser/:_id",authMiddleware.checkValidation,userController.deleteUser)
+router.delete("/deleteUser/:_id",authMiddleware.checkAuthentication,authMiddleware.checkAutherization,userController.deleteUser)
 
 module.exports = router;
